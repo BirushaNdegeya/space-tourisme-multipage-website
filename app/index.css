@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -30,4 +30,35 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+
+
+  sm	640px	@media (min-width: 640px) { ... }
+md	768px	@media (min-width: 768px) { ... }
+lg	1024px	@media (min-width: 1024px) { ... }
+xl	1280px	@media (min-width: 1280px) { ... }
+2xl	1536px	@media (min-width: 1536px) { ... }
+} */
+
+@layer utilities {
+  .bg-image-home {
+    background-image: url('/home/background-home-mobile.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  @media (min-width: 640px) {
+    .bg-image-home {
+      background-image: url('/home/background-home-tablet.jpg');
+    }
+  }
+  @media (min-width: 1024px) {
+    .bg-image-home {
+      background-image: url('/home/background-home-desktop.jpg');
+    }
+  }
 }
+
+
+
+/* body {
+  background-image: url('/home/background-home-mobile.jpg');
+} */
